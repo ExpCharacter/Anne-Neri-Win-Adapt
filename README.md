@@ -1,2 +1,2 @@
 # Anne-Neri
-音理酱自己改的Anne药役
+音理酱改的Anne药役的Winserver适配
