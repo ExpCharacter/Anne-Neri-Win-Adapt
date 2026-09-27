@@ -1,6 +1,7 @@
 # Anne-Neri 药役专用服 —— Windows Server 2022 部署说明
 
 下面这些都是ai写的，后续有空重写
+
 本目录原本是**纯 Linux** 的 L4D2 服务端配置包（`*.so` 二进制 + `srcds_run` 启动方式）。
 现已**在原目录内补齐 Windows 版本二进制**，改造后同一份文件**同时支持 Linux 与 Windows Server 2022**：
 
