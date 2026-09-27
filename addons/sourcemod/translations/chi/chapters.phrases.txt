@@ -1,0 +1,723 @@
+"Phrases"
+{
+	"c1m1_hotel"
+	{
+		"chi"		"1：旅馆"
+	}
+	"c1m2_streets"
+	{
+		"chi"		"2：街道"
+	}
+	"c1m3_mall"
+	{
+		"chi"		"3：购物中心"
+	}
+	"c1m4_atrium"
+	{
+		"chi"		"4：中厅"
+	}
+	"c2m1_highway"
+	{
+		"chi"		"1：高速公路"
+	}
+	"c2m2_fairgrounds"
+	{
+		"chi"		"2：游乐场"
+	}
+	"c2m3_coaster"
+	{
+		"chi"		"3：过山车"
+	}
+	"c2m4_barns"
+	{
+		"chi"		"4：谷仓"
+	}
+	"c2m5_concert"
+	{
+		"chi"		"5：音乐会"
+	}
+	"c3m1_plankcountry"
+	{
+		"chi"		"1：乡村"
+	}
+	"c3m2_swamp"
+	{
+		"chi"		"2：沼泽"
+	}
+	"c3m3_shantytown"
+	{
+		"chi"		"3：贫民窟"
+	}
+	"c3m4_plantation"
+	{
+		"chi"		"4：种植园"
+	}
+	"c4m1_milltown_a"
+	{
+		"chi"		"1：密尔城"
+	}
+	"c4m2_sugarmill_a"
+	{
+		"chi"		"2：糖厂"
+	}
+	"c4m3_sugarmill_b"
+	{
+		"chi"		"3：逃离工厂"
+	}
+	"c4m4_milltown_b"
+	{
+		"chi"		"4：重返小镇"
+	}
+	"c4m5_milltown_escape"
+	{
+		"chi"		"5：逃离小镇"
+	}
+	"c5m1_waterfront"
+	{
+		"chi"		"1：码头"
+	}
+	"c5m2_park"
+	{
+		"chi"		"2：公园"
+	}
+	"c5m3_cemetery"
+	{
+		"chi"		"3：墓地"
+	}
+	"c5m4_quarter"
+	{
+		"chi"		"4：特区"
+	}
+	"c5m5_bridge"
+	{
+		"chi"		"5：桥"
+	}
+	"c6m1_riverbank"
+	{
+		"chi"		"1: 河畔"
+	}
+	"c6m2_bedlam"
+	{
+		"chi"		"2: 地下通道"
+	}
+	"c6m3_port"
+	{
+		"chi"		"3: 港口"
+	}
+	"c7m1_docks"
+	{
+		"chi"		"1: 码头"
+	}
+	"c7m2_barge"
+	{
+		"chi"		"2: 驳船"
+	}
+	"c7m3_port"
+	{
+		"chi"		"3: 港口"
+	}
+	"c8m1_apartment"
+	{
+		"chi"		"1: 公寓"
+	}
+	"c8m2_subway"
+	{
+		"chi"		"2: 地铁"
+	}
+	"c8m3_sewers"
+	{
+		"chi"		"3: 下水道"
+	}
+	"c8m4_interior"
+	{
+		"chi"		"4: 医院"
+	}
+	"c8m5_rooftop"
+	{
+		"chi"		"5: 屋顶"
+	}
+	"c9m1_alleys"
+	{
+		"chi"		"1: 小巷"
+	}
+	"c9m2_lots"
+	{
+		"chi"		"2: 卡车停车场"
+	}
+	"c10m1_caves"
+	{
+		"chi"		"1: 收费公路"
+	}
+	"c10m2_drainage"
+	{
+		"chi"		"2: 水沟"
+	}
+	"c10m3_ranchhouse"
+	{
+		"chi"		"3: 教堂"
+	}
+	"c10m4_mainstreet"
+	{
+		"chi"		"4: 小镇"
+	}
+	"c10m5_houseboat"
+	{
+		"chi"		"5: 码头"
+	}
+	"c11m1_greenhouse"
+	{
+		"chi"		"1: 花房"
+	}
+	"c11m2_offices"
+	{
+		"chi"		"2: 起重机"
+	}
+	"c11m3_garage"
+	{
+		"chi"		"3: 建筑工地"
+	}
+	"c11m4_terminal"
+	{
+		"chi"		"4: 航空机场"
+	}
+	"c11m5_runway"
+	{
+		"chi"		"5: 飞机跑道"
+	}
+	"c12m1_hilltop"
+	{
+		"chi"		"1: 森林"
+	}
+	"c12m2_traintunnel"
+	{
+		"chi"		"2: 隧道"
+	}
+	"c12m3_bridge"
+	{
+		"chi"		"3: 桥"
+	}
+	"c12m4_barn"
+	{
+		"chi"		"4: 火车站"
+	}
+	"c12m5_cornfield"
+	{
+		"chi"		"5: 农舍"
+	}
+	"c13m1_alpinecreek"
+	{
+		"chi"		"1: 高山小溪"
+	}
+	"c13m2_southpinestream"
+	{
+		"chi"		"2: 松木之河"
+	}
+	"c13m3_memorialbridge"
+	{
+		"chi"		"3: 纪念大桥"
+	}
+	"c13m4_cutthroatcreek"
+	{
+		"chi"		"4: 残酷溪流"
+	}
+	"c14m1_junkyard"
+	{
+		"chi"		"1: 教区桥梁"
+	}
+	"c14m2_lighthouse"
+	{
+		"chi"		"2: 灯塔"
+	}
+	"l4d2_stadium1_apartment"
+	{
+		"chi"		"The Apartment"
+	}
+	"l4d2_stadium2_riverwalk"
+	{
+		"chi"		"The Riverwalk"
+	}
+	"l4d2_stadium3_city1"
+	{
+		"chi"		"The Law"
+	}
+	"l4d2_stadium4_city2"
+	{
+		"chi"		"The City"
+	}
+	"l4d2_stadium5_stadium"
+	{
+		"chi"		"The Stadium"
+	}
+	"l4d2_sv_stadium2_riverwalk"
+	{
+		"chi"		"The Riverwalk Survival"
+	}
+	"l4d2_sv_stadium3_city1"
+	{
+		"chi"		"The Law Survival"
+	}
+	"l4d2_sv_stadium4_city2"
+	{
+		"chi"		"The City Survival"
+	}
+	"dkr_m1_motel"
+	{
+		"chi"		"The Motel"
+	}
+	"dkr_m2_carnival"
+	{
+		"chi"		"The Carnival"
+	}
+	"dkr_m3_tunneloflove"
+	{
+		"chi"		"The Tunnel of Love"
+	}
+	"dkr_m4_ferris"
+	{
+		"chi"		"The Ferris Wheel"
+	}
+	"dkr_m5_stadium"
+	{
+		"chi"		"The Stadium"
+	}
+	"PR1_Waterfront_F"
+	{
+		"chi"		"Waterfront"
+	}
+	"PR2_Park_F"
+	{
+		"chi"		"park"
+	}
+	"PR3_Highway_F"
+	{
+		"chi"		"Highway"
+	}
+	"PR4_Quarter_F"
+	{
+		"chi"		"Quarter"
+	}
+	"PR5_Bridge_F"
+	{
+		"chi"		"bridge"
+	}
+	"wfp1_track"
+	{
+		"chi"		"Trainyard"
+	}
+	"wfp2_horn"
+	{
+		"chi"		"Cave"
+	}
+	"wfp3_mill"
+	{
+		"chi"		"Industrial Warehouses"
+	}
+	"wfp4_commstation"
+	{
+		"chi"		"Radio Stations"
+	}
+	"l4d2_city17_01"
+	{
+		"chi"		"1: Tunnels"
+	}
+	"l4d2_city17_02"
+	{
+		"chi"		"2: To the surface"
+	}
+	"l4d2_city17_03"
+	{
+		"chi"		"3: Streets"
+	}
+	"l4d2_city17_04"
+	{
+		"chi"		"4: Hospital"
+	}
+	"l4d2_city17_05"
+	{
+		"chi"		"5: Trainstation"
+	}
+	"cdta_01detour"
+	{
+		"chi"		"DTA1 Detour"
+	}
+	"cdta_02road"
+	{
+		"chi"		"DTA2 Hill"
+	}
+	"cdta_03warehouse"
+	{
+		"chi"		"DTA3 Warehouse"
+	}
+	"cdta_04onarail"
+	{
+		"chi"		"DTA4 On A Rail"
+	}
+	"cdta_05finalroad"
+	{
+		"chi"		"DTA5 Final Road"
+	}
+	"l4d2_diescraper1_apartment_361"
+	{
+		"chi"		"Apartment complex"
+	}
+	"l4d2_diescraper2_streets_361"
+	{
+		"chi"		"Downtown military outpost"
+	}
+	"l4d2_diescraper3_mid_361"
+	{
+		"chi"		"The Skymall"
+	}
+	"l4d2_diescraper4_top_361"
+	{
+		"chi"		"The top suites"
+	}
+	"nanningcity_departure_m1"
+	{
+		"chi"		"1: 启程/Departure"
+	}
+	"nanningcity_chaoyang_square_m2"
+	{
+		"chi"		"2: 广场/Square"
+	}
+	"nanningcity_main_street_m3"
+	{
+		"chi"		"3: 主街/Main street"
+	}
+	"nanningcity_main_road_m4"
+	{
+		"chi"		"4: 主干道/Main road"
+	}
+	"nanningcity_workzone_m5"
+	{
+		"chi"		"5: 施工区/Work zone"
+	}
+	"nanningcity_bridge_m6"
+	{
+		"chi"		"6: 大桥/Bridge"
+	}
+	"l4d_dbd2dc_anna_is_gone"
+	{
+		"chi"		"Anna is gone"
+	}
+	"l4d_dbd2dc_the_mall"
+	{
+		"chi"		"The mall"
+	}
+	"l4d_dbd2dc_clean_up"
+	{
+		"chi"		"Clean up"
+	}
+	"l4d_dbd2dc_undead_center"
+	{
+		"chi"		"Undead center"
+	}
+	"l4d_dbd2dc_new_dawn"
+	{
+		"chi"		"New dawn"
+	}
+	"l4d_deadline02"
+	{
+		"chi"		"Dead Line Survival"
+	}
+	"l4d_dbd2_undead_center"
+	{
+		"chi"		"Dead Line Scavenge"
+	}
+	"cwm1_intro"
+	{
+		"chi"		"The Riverbed"
+	}
+	"cwm2_warehouse"
+	{
+		"chi"		"The Town"
+	}
+	"cwm3_drain"
+	{
+		"chi"		"The Sewers"
+	}
+	"cwm4_building"
+	{
+		"chi"		"The Office Building"
+	}
+	"bdp_bunker01"
+	{
+		"chi"		"1: Deeper Levels"
+	}
+	"bdp_bunker02"
+	{
+		"chi"		"2: Old Tunnels"
+	}
+	"bdp_bunker03"
+	{
+		"chi"		"3: Freight Elevator"
+	}
+	"bdp_bunker04"
+	{
+		"chi"		"4: The Road"
+	}
+	"bdp_bunker05a"
+	{
+		"chi"		"5: The Forest Garage"
+	}
+	"l4d_tbm_1"
+	{
+		"chi"		"1: The Cottage"
+	}
+	"l4d_tbm_2"
+	{
+		"chi"		"2: Acid House Party"
+	}
+	"l4d_tbm_3"
+	{
+		"chi"		"3: 'Keep Off The Moors'"
+	}
+	"l4d_tbm_4"
+	{
+		"chi"		"4: The Old Stag"
+	}
+	"l4d_tbm_5"
+	{
+		"chi"		"5: Arthur's Supplies"
+	}
+	"dxyl1"
+	{
+		"chi"		"Tunnel"
+	}
+	"dxyl2"
+	{
+		"chi"		"Prison"
+	}
+	"dxyl3"
+	{
+		"chi"		"Reactor"
+	}
+	"dxyl4_f"
+	{
+		"chi"		"Metro"
+	}
+	"cave7m1"
+	{
+		"chi"		"cave7maps1"
+	}
+	"cave7m2"
+	{
+		"chi"		"cave7maps2"
+	}
+	"cave7m3"
+	{
+		"chi"		"cave7maps3"
+	}
+	"cave7m4"
+	{
+		"chi"		"cave7maps4"
+	}
+	"cave7m5"
+	{
+		"chi"		"cave7maps5"
+	}
+	"cave7m6"
+	{
+		"chi"		"cave7maps6"
+	}
+	"cave7m7"
+	{
+		"chi"		"cave7maps7"
+	}
+	"cave7m9"
+	{
+		"chi"		"cave7maps9"
+	}
+	"cave7m10"
+	{
+		"chi"		"cave7maps10"
+	}
+	"cave7m11"
+	{
+		"chi"		"cave7maps11"
+	}
+	"cave7m12"
+	{
+		"chi"		"cave7maps12"
+	}
+	"<map name>"
+	{
+		"chi"		"<map title>"
+	}
+	"contra3d01"
+	{
+		"chi"		"ContraZ01"
+	}
+	"contra3d02"
+	{
+		"chi"		"ContraZ02"
+	}
+	"contra3d03"
+	{
+		"chi"		"ContraZ03"
+	}
+	"contra3d04"
+	{
+		"chi"		"ContraZ04"
+	}
+	"contra3d05"
+	{
+		"chi"		"ContraZ05"
+	}
+	"contra3d06"
+	{
+		"chi"		"ContraZ06"
+	}
+	"l4d2_darkblood01_tanker"
+	{
+		"chi"		"Tanker Ship"
+	}
+	"l4d2_darkblood02_engine"
+	{
+		"chi"		"Tanker Engine"
+	}
+	"l4d2_darkblood03_platform"
+	{
+		"chi"		"Platform"
+	}
+	"l4d2_darkblood04_extraction"
+	{
+		"chi"		"Extraction"
+	}
+	"dworld01_point"
+	{
+		"chi"		"Ⅰ.谜题"
+	}
+	"dworld02_falling"
+	{
+		"chi"		"Ⅱ.遗迹"
+	}
+	"dworld03_noctis"
+	{
+		"chi"		"Ⅲ.山峦"
+	}
+	"dworld04_monolith"
+	{
+		"chi"		"Ⅳ.要塞"
+	}
+	"dworld05_forgotten"
+	{
+		"chi"		"Ⅴ.沉睡"
+	}
+	"dworld06_sheep"
+	{
+		"chi"		"Ⅵ.梦境"
+	}
+	"dworld07_new_eden"
+	{
+		"chi"		"Ⅶ.新界"
+	}
+	"dworld08_tuto"
+	{
+		"chi"		"Ⅷ.探求"
+	}
+	"dworld09_tuto2"
+	{
+		"chi"		"Ⅸ.死刑"
+	}
+	"dworld10_ancient"
+	{
+		"chi"		"Ⅹ.古殿"
+	}
+	"dworld11_purge"
+	{
+		"chi"		"Ⅺ.花园"
+	}
+	"dworld12_warp"
+	{
+		"chi"		"Ⅻ.终章"
+	}
+	"jiugongchang1"
+	{
+		"chi"		"地下室"
+	}
+	"jiugongchang2"
+	{
+		"chi"		"小吃街"
+	}
+	"jiugongchang3"
+	{
+		"chi"		"工厂"
+	}
+	"jiugongchang4"
+	{
+		"chi"		"办公楼"
+	}
+	"jiugongchang5"
+	{
+		"chi"		"军库"
+	}
+	"jiugongchang6"
+	{
+		"chi"		"鬼楼"
+	}
+	"jiugongchang7"
+	{
+		"chi"		"机械怪"
+	}
+	"ins_m1_buhriz"
+	{
+		"chi"		"buhriz"
+	}
+	"ins_m2_district1"
+	{
+		"chi"		"district1"
+	}
+	"ins_m3_district2"
+	{
+		"chi"		"district2"
+	}
+	"ins_m4_revolt"
+	{
+		"chi"		"revolt"
+	}
+	"ins_m5_tell"
+	{
+		"chi"		"tell"
+	}
+	"ins_m6_ministry"
+	{
+		"chi"		"ministry"
+	}
+	"LS_FSL"
+	{
+		"chi"		"灵城-丰收路"
+	}
+	"LS_FJL"
+	{
+		"chi"		"灵城-丰江路"
+	}
+	"LS_ZSXML"
+	{
+		"chi"		"灵城-中山路与第一幼儿园"
+	}
+	"LS_XML"
+	{
+		"chi"		"灵城-西门街"
+	}
+	"LS_DXSC"
+	{
+		"chi"		"灵城-地下商场"
+	}
+	"LS_RMGC"
+	{
+		"chi"		"灵城-人民广场"
+	}
+	"LS_MEJAN"
+	{
+		"chi"		"灵城-江岸"
+	}
+	"LS_LFSJQ"
+	{
+		"chi"		"六峰山景区"
+	}
+	"LS_LFSJQ_CXF"
+	{
+		"chi"		"六峰山-冲霄峰"
+	}
+}

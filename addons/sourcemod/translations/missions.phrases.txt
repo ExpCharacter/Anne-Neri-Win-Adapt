@@ -1,0 +1,139 @@
+"Phrases"
+{
+	"L4D2C1"
+	{
+		"en"		"Dead Center"
+	}
+	"L4D2C2"
+	{
+		"en"		"Dark Carnival"
+	}
+	"L4D2C3"
+	{
+		"en"		"Swamp Fever"
+	}
+	"L4D2C4"
+	{
+		"en"		"Hard Rain"
+	}
+	"L4D2C5"
+	{
+		"en"		"The Parish"
+	}
+	"L4D2C6"
+	{
+		"en"		"The Passing"
+	}
+	"L4D2C7"
+	{
+		"en"		"The Sacrifice"
+	}
+	"L4D2C8"
+	{
+		"en"		"No Mercy"
+	}
+	"L4D2C9"
+	{
+		"en"		"Crash Course"
+	}
+	"L4D2C10"
+	{
+		"en"		"Death Toll"
+	}
+	"L4D2C11"
+	{
+		"en"		"Dead Air"
+	}
+	"L4D2C12"
+	{
+		"en"		"Blood Harvest"
+	}
+	"L4D2C13"
+	{
+		"en"		"Cold Stream"
+	}
+	"L4D2C14"
+	{
+		"en"		"The Last Stand"
+	}
+	"suicideblitz2"
+	{
+		"en"		"Suicide Blitz 2"
+	}
+	"DarkCarnivalRemix"
+	{
+		"en"		"Dark Carnival Remix"
+	}
+	"ParishOverGrowth"
+	{
+		"en"		"Parish: OverGrowth"
+	}
+	"WhiteForest"
+	{
+		"en"		"White Forest"
+	}
+	"City17l4d2"
+	{
+		"en"		"City 17 v3.2"
+	}
+	"detourahead"
+	{
+		"en"		"$DetourAhead_Title"
+	}
+	"Diescraper362"
+	{
+		"en"		"Diescraper Redux 3.62"
+	}
+	"GuangXiNanning"
+	{
+		"en"		"广西-南宁 V1.15.1"
+	}
+	"dbd2dc"
+	{
+		"en"		"Dead Before Dawn DC"
+	}
+	"CarriedOff"
+	{
+		"en"		"Carried Off"
+	}
+	"BuriedDeep"
+	{
+		"en"		"Buried Deep"
+	}
+	"TheBloodyMoors"
+	{
+		"en"		"The Bloody Moors"
+	}
+	"dxyl"
+	{
+		"en"		"地心引力TheGravitation"
+	}
+	"CaveTour7"
+	{
+		"en"		"Cave7"
+	}
+	"contraz"
+	{
+		"en"		"ContraZ"
+	}
+	"darkblood2"
+	{
+		"en"		"Dark Blood 2"
+	}
+	"eye"
+	{
+		"en"		"异度神召"
+	}
+	"jiugongchang"
+	{
+		"en"		"九死一生之小女孩的梦境v3.3"
+	}
+	"insurgency"
+	{
+		"en"		"Insurgency"
+	}
+	"LingShanbeta"
+	{
+		"en"		"广西_灵山V1.0"
+	}
+}

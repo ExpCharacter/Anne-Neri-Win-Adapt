@@ -1,0 +1,34 @@
+"Games"
+{
+	"left4dead2"
+	{
+		"Functions"
+		{
+			"SurvivorBot::IsReachable"
+			{
+				"signature"		"SurvivorBot::IsReachable"
+				"callconv"		"thiscall"
+				"return"		"int"
+				"this"			"ignore"
+				"arguments"
+				{
+					"a2"
+					{
+						"type"	"cbaseentity"
+					}
+				}
+			}
+		}
+		"Signatures"
+		{
+			"SurvivorBot::IsReachable"
+			{
+				"library"		"server"
+				"linux"			"@_ZNK11SurvivorBot11IsReachableEP11CBaseEntity"
+				"windows"		"\xD9\x2A\x2A\x2A\x2A\x2A\x56\x6A\x2A\x6A\x2A\x6A\x2A\x51\x8B\xF1\xD9"
+				/* D9 ? ? ? ? ? 56 6A ? 6A ? 6A ? 51 8B F1 D9 */
+				/* SurvivorBot::IsReachable(CBaseEntity *) - Attano/L4D2-Competitive-Framework */
+			}
+		}
+	}
+}
