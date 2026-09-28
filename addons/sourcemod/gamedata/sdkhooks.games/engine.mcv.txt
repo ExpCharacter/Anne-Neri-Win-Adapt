@@ -6,135 +6,106 @@
 		{
 			"Blocked"
 			{
-				"windows64"	"106"
-				"linux64"	"107"
+				"windows"	"106"
 			}
 			"EndTouch"
 			{
-				"windows64"	"104"
-				"linux64"	"105"
+				"windows"	"104"
 			}
 			"FireBullets"
 			{
-				"windows64"	"118"
-				"linux64"	"119"
+				"windows"	"118"
 			}
 			"GetMaxHealth"
 			{
-				"windows64"	"122"
-				"linux64"	"123"
-			}
-			"GroundEntChanged"
-			{
-				"windows64"	"147"
-				"linux64"	"148"
+				"windows"	"122"
 			}
 			"OnTakeDamage"
 			{
-				"windows64"	"68"
-				"linux64"	"69"
+				"windows"	"68"
 			}
 			"OnTakeDamage_Alive"
 			{
-				"windows64"	"310"
-				"linux64"	"311"
+				"windows"	"306"
 			}
 			"PreThink"
 			{
-				"windows64"	"379"
-				"linux64"	"380"
+				"windows"	"376"
 			}
 			"PostThink"
 			{
-				"windows64"	"380"
-				"linux64"	"381"
+				"windows"	"377"
 			}
 			"Reload"
 			{
-				"windows64"	"299"
-				"linux64"	"300"
+				"windows"	"295"
 			}
 			"SetTransmit"
 			{
-				"windows64"	"23"
-				"linux64"	"24"
+				"windows"	"23"
 			}
 			"ShouldCollide"
 			{
-				"windows64"	"18"
-				"linux64"	"19"
+				"windows"	"18"
 			}
 			"Spawn"
 			{
-				"windows64"	"25"
-				"linux64"	"26"
+				"windows"	"25"
 			}
 			"StartTouch"
 			{
-				"windows64"	"102"
-				"linux64"	"103"
+				"windows"	"102"
 			}
 			"Think"
 			{
-				"windows64"	"52"
-				"linux64"	"53"
+				"windows"	"52"
 			}
 			"Touch"
 			{
-				"windows64"	"103"
-				"linux64"	"104"
+				"windows"	"103"
 			}
 			"TraceAttack"
 			{
-				"windows64"	"66"
-				"linux64"	"67"
+				"windows"	"66"
 			}
 			"Use"
 			{
-				"windows64"	"101"
-				"linux64"	"102"
+				"windows"	"101"
 			}
 			"VPhysicsUpdate"
 			{
-				"windows64"	"157"
-				"linux64"	"158"
+				"windows"	"157"
 			}
 			"Weapon_CanSwitchTo"
 			{
-				"windows64"	"302"
-				"linux64"	"303"
+				"windows"	"297"
 			}
 			"Weapon_CanUse"
 			{
-				"windows64"	"295"
-				"linux64"	"296"
+				"windows"	"291"
 			}
 			"Weapon_Drop"
 			{
-				"windows64"	"299"
-				"linux64"	"300"
+				"windows"	"294"
 			}
 			"Weapon_Equip"
 			{
-				"windows64"	"296"
-				"linux64"	"297"
+				"windows"	"292"
 			}
 			"Weapon_Switch"
 			{
-				"windows64"	"300"
-				"linux64"	"301"
+				"windows"	"296"
 			}
 		}
 	}
-
+	
 	"#default"
 	{
 		"Offsets"
 		{
 			"EntityListeners"
 			{
-				"windows64"	"393272"
-				"linux64"	"393272"
+				"windows"	"196644"
 			}
 		}
 	}

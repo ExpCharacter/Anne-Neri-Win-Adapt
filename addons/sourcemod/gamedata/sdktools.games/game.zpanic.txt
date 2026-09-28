@@ -23,13 +23,13 @@
 			}
 			"RemovePlayerItem"
 			{
-				"windows"	"281"
-				"linux"		"282"
+				"windows"	"285"
+				"linux"		"286"
 			}
 			"Weapon_GetSlot"
 			{
-				"windows"	"279"
-				"linux"		"280"
+				"windows"	"280"
+				"linux"		"281"
 			}
 			"Ignite"
 			{
@@ -43,8 +43,8 @@
 			}
 			"Teleport"
 			{
-				"windows"	"107"
-				"linux"		"108"
+				"windows"	"115"
+				"linux"		"116"
 			}
 			"CommitSuicide"
 			{
@@ -53,33 +53,33 @@
 			}
 			"GetVelocity"
 			{
-				"windows"	"141"
-				"linux"		"142"
+				"windows"	"151"
+				"linux"		"152"
 			}
 			"EyeAngles"
 			{
-				"windows"	"132"
-				"linux"		"133"
+				"windows"	"142"
+				"linux"		"143"
 			}
 			"AcceptInput"
 			{
-				"windows"	"36"
-				"linux"		"37"
+				"windows"	"44"
+				"linux"		"45"
 			}
 			"SetEntityModel"
 			{
-				"windows"	"24"
-				"linux"		"25"
+				"windows"	"32"
+				"linux"		"33"
 			}
 			"WeaponEquip"
 			{
-				"windows"	"272"
-				"linux"		"273"
+				"windows"	"273"
+				"linux"		"274"
 			}
 			"Activate"
 			{
-				"windows"	"33"
-				"linux"		"34"
+				"windows"	"41"
+				"linux"		"42"
 			}
 			"PlayerRunCmd"
 			{
@@ -93,13 +93,13 @@
 			}
 			"SetOwnerEntity"
 			{
-				"windows"	"17"
-				"linux"		"18"
+				"windows"	"25"
+				"linux"		"26"
 			}
 			"GiveAmmo"
 			{
-				"windows"	"263"
-				"linux"		"264"
+				"windows"	"264"
+				"linux"		"265"
 			}
 		}
 		"Signatures"

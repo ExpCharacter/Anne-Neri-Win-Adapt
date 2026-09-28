@@ -319,7 +319,6 @@
 			"game"					"tf2classic"
 			"game"					"pf2"
 			"game"					"dystopia"
-			"game"					"treason"
 		}
 		
 		"Keys"
