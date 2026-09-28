@@ -10,6 +10,10 @@
 				{
 					"signature"	"NextBotManager::OnCharacterVomitedUpon"
 				}
+				"windows"
+				{
+					"signature"	"NextBotManager::OnCharacterVomitedUpon"
+				}
 			}
 		}
 		"Signatures"
@@ -18,6 +22,9 @@
 			{
 				"library"   "server"
 				"linux"     "@_ZN14NextBotManager22OnCharacterVomitedUponEP20CBaseCombatCharacter"
+				"windows"   "\x55\x8B\xEC\x8B\x45\x08\x83\xEC\x0C\x56\x57\x33\xFF\x85\xC0\x74\x2A\x89\x45\xF4"
+				/* 55 8B EC 8B 45 08 83 EC 0C 56 57 33 FF 85 C0 74 ? 89 45 F4 */
+				/* Updated 2026-09: relocated via "(MOB) %d wanderers grabbed" string xref (unique match verified). */
 			}
 		}
 		"Offsets"
@@ -25,6 +32,8 @@
 			"WanderersCondition"
 			{
 				"linux"     "217"
+				"windows"   "153"
+				/* Windows: cmp edi,esi; jge @ sig+153 (3B FE 7D 0E) - same patch site as A1m's MemPatch. */
 			}
 		}
 	}

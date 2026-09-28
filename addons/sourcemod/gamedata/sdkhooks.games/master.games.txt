@@ -223,4 +223,12 @@
 	{
 		"game"		"hl1mp"
 	}
+	"game.treason.txt"
+	{
+		"game"		"treason"
+	}
+	"game.ship.txt"
+	{
+		"game"		"ship"
+	}
 }

@@ -190,9 +190,9 @@
 			{
 				"library"		"server"
 				"linux"			"@_ZN9KeyValues7FindKeyEPKcb"
-				"windows"		"\x55\x8B\x2A\x81\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x33\x2A\x89\x2A\x2A\x8B\x2A\x8A\x2A\x2A\x56"
-				/* 55 8B ? 81 ? ? ? ? ? ? ? ? ? ? 33 ? 89 ? ? 8B ? 8A ? ? 56 */
-				/* Search: "CfgFile" - above is call */
+				"windows"		"\x55\x8B\xEC\x81\xEC\x2A\x2A\x2A\x2A\xA1\x2A\x2A\x2A\x2A\x33\xC5\x89\x45\xFC\x8A\x45\x0C\x56\x8B\x75\x08\x57\x8B\xF9"
+				/* 55 8B EC 81 EC ? ? ? ? A1 ? ? ? ? 33 C5 89 45 FC 8A 45 0C 56 8B 75 08 57 8B F9 */
+				/* Updated 2026-09: located via KeyValues::GetString (verified unique match). */
 			}
 		}
 	}
