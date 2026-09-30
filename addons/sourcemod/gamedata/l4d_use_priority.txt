@@ -29,7 +29,7 @@
 			{
 				"library"		"server"
 				"linux"			"@_ZN11CBaseEntity14GetUsePriorityEPS_"
-				"windows"		"\xB8\x01\x00\x00\x00\xC2\x04\x00\xCC\xCC\xCC\xCC\xCC\xCC\xCC\xCC\xB0"
+				"windows"		"\xB8\x01\x2A\x2A\x2A\xC2\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x8B\xCC\xCC\xCC\xCC\xCC\xCC\xCC\xCC\xB0"
 				/* B8 01 00 00 00 C2 04 00 CC CC CC CC CC CC CC CC B0 */
 				/* VTable method to find. */
 				/* Search "unhandled input: (%s) -> (%s,%s)\n" for "CBaseEntity::AcceptInput" and 3 functions up should be target
@@ -47,7 +47,7 @@
 			{
 				"library"		"server"
 				"linux"			"@_ZN11CBaseEntity14GetUsePriorityEPS_"
-				"windows"		"\xB8\x01\x00\x00\x00\xC2\x04\x00"
+				"windows"		"\xB8\x01\x2A\x2A\x2A\xC2\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x8B"
 				/* B8 01 00 00 00 C2 04 00 */
 				/* Windows matches multiple functions, but the first is our target. */
 				/* This signature is the full function. VTable dhook crashed for some reason so using patch instead. */
