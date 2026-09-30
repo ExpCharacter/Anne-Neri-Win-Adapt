@@ -16,24 +16,22 @@ new		bool:	RM_bIsPluginsLoaded;
 new		bool:	RM_bIsMapRestarted;
 new		Handle:	RM_hDoRestart;
 new		Handle:	RM_hAllowVoting;
+new		Handle:	RM_hAllowCfgChange;
 new		Handle:	RM_hReloaded;
 new		Handle:	RM_hAutoLoad;
 new		Handle:	RM_hAutoCfg;
 new		Handle: RM_hFwdMatchLoad;
 new		Handle: RM_hFwdMatchUnload;
-new 	Handle:	RM_hConfigFile_On;
-new 	Handle:	RM_hConfigFile_Plugins;
-new 	Handle:	RM_hConfigFile_Off;
 
 RM_OnModuleStart()
 {
 	RM_hDoRestart			= CreateConVarEx("match_restart"		, "1", "Sets whether the plugin will restart the map upon match mode being forced or requested");
 	RM_hAllowVoting			= CreateConVarEx("match_allowvoting"	, "1", "Sets whether players can vote/request for match mode");
-	RM_hAutoLoad			= CreateConVarEx("match_autoload"		, "0", "Has match mode start up automatically when a player connects and the server is not in match mode");
+	RM_hAllowCfgChange		= CreateConVarEx("match_allowcfgchange", "0", "Allow players to request match mode be restarted with a new config");
+	RM_hAutoLoad			= CreateConVarEx("match_autoload"		, "1", "Has match mode start up automatically when a player connects and the server is not in match mode");
 	RM_hAutoCfg				= CreateConVarEx("match_autoconfig"		, "", "Specify which config to load if the autoloader is enabled");
-	RM_hConfigFile_On		= CreateConVarEx("match_execcfg_on"		, "confogl.cfg" 		, "Execute this config file upon match mode starts and every map after that.");
-	RM_hConfigFile_Plugins	= CreateConVarEx("match_execcfg_plugins", "generalfixes.cfg;confogl_plugins.cfg;sharedplugins.cfg" , "Execute this config file upon match mode starts. This will only get executed once and meant for plugins that needs to be loaded.");
-	RM_hConfigFile_Off		= CreateConVarEx("match_execcfg_off"	, "confogl_off.cfg" 	, "Execute this config file upon match mode ends.");
+	// 与 Neri 服正式版(AnneHappy 5.0)对齐:正式版只 exec confogl_plugins.cfg 这一个文件(硬编码),
+	// 旧默认值 generalfixes.cfg;sharedplugins.cfg 两个文件不存在,只会刷两条 not found 日志
 
 	
 	//RegConsoleCmd("sm_match", RM_Cmd_Match);
@@ -104,35 +102,17 @@ RM_Match_Load()
 		RM_bIsAMatchActive = true;
 	}
 
-	SetConVarInt(FindConVar("sb_all_bot_game"),1);
-	decl String:sBuffer[128];
-	
 	if(!RM_bIsPluginsLoaded)
 	{
 		if(RM_DEBUG || IsDebugEnabled())
 			LogMessage("%s Loading plugins and reload self",RM_DEBUG_PREFIX);
 		
-		
 		SetConVarInt(RM_hReloaded,1);
-		GetConVarString(RM_hConfigFile_Plugins,sBuffer,sizeof(sBuffer));
-		char sPieces[32][256];
-		int iNumPieces = ExplodeString(sBuffer, ";", sPieces, sizeof(sPieces), sizeof(sPieces[]));
-
-		// Unlocking and Unloading Plugins.
-		ServerCommand("sm plugins load_unlock");
-		ServerCommand("sm plugins unload_all");
-
-		// Loading Plugins.
-		for(int i = 0; i < iNumPieces; i++)
-		{
-			ExecuteCfg(sPieces[i]);
-		}
-
+		ExecuteCfg("confogl_plugins.cfg");
 		return;
 	}
 	
-	GetConVarString(RM_hConfigFile_On,sBuffer,sizeof(sBuffer));
-	ExecuteCfg(sBuffer);
+	ExecuteCfg("confogl.cfg");
 	if(RM_DEBUG || IsDebugEnabled())
 		LogMessage("%s Match config executed",RM_DEBUG_PREFIX);
 	
@@ -144,11 +124,11 @@ RM_Match_Load()
 	RM_bIsMatchModeLoaded = true;
 	IsPluginEnabled(true,true);
 	
-	CPrintToChatAll("{blue}[{default}Confogl{blue}] {default}Match mode loaded!");
+	PrintToChatAll("\x01[\x05Confogl\x01] 加载模式配置");
 	
 	if(!RM_bIsMapRestarted && GetConVarBool(RM_hDoRestart))
 	{
-		CPrintToChatAll("{blue}[{default}Confogl{blue}] {default}Restarting map!");
+		PrintToChatAll("\x01[\x05Confogl\x01] 重新启动地图");
 		CreateTimer(MAPRESTARTTIME,RM_Match_MapRestart_Timer);
 	}
 	
@@ -163,10 +143,9 @@ RM_Match_Unload(bool:bForced=false)
 	if(!IsHumansOnServer() || bForced)
 	{
 		if(RM_DEBUG || IsDebugEnabled())
-			LogMessage("%s Match �s no longer active, sb_all_bot_game reset to 0, IsHumansOnServer %b, bForced %b",RM_DEBUG_PREFIX,IsHumansOnServer(),bForced);
+			LogMessage("%s Match ís no longer active, IsHumansOnServer %b, bForced %b",RM_DEBUG_PREFIX,IsHumansOnServer(),bForced);
 		
 		RM_bIsAMatchActive = false;
-		SetConVarInt(FindConVar("sb_all_bot_game"),0);
 	}
 	
 	if(IsHumansOnServer() && !bForced) return;
@@ -183,10 +162,9 @@ RM_Match_Unload(bool:bForced=false)
 	Call_StartForward(RM_hFwdMatchUnload);
 	Call_Finish();	
 
-	CPrintToChatAll("{blue}[{default}Confogl{blue}] {default}Match mode unloaded!");
+	PrintToChatAll("\x01[\x05Confogl\x01] 卸载模式配置");
 	
-	GetConVarString(RM_hConfigFile_Off,sBuffer,sizeof(sBuffer));
-	ExecuteCfg(sBuffer);
+	ExecuteCfg("confogl_off.cfg");
 	
 	if(RM_DEBUG || IsDebugEnabled())
 		LogMessage("%s Match mode unloaded!",RM_DEBUG_PREFIX);
@@ -195,8 +173,6 @@ RM_Match_Unload(bool:bForced=false)
 
 public Action:RM_Match_MapRestart_Timer(Handle:timer)
 {
-	ServerCommand("sm plugins load_lock");
-	
 	if(RM_DEBUG || IsDebugEnabled())
 		LogMessage("%s Restarting map...",RM_DEBUG_PREFIX);
 	
@@ -211,21 +187,21 @@ RM_UpdateCfgOn(const String:cfgfile[])
 {
 	if(SetCustomCfg(cfgfile))
 	{
-		CPrintToChatAll("{blue}[{default}Confogl{blue}] {default}Loading {olive}%s", cfgfile);
-		RM_Match_Load();
-
+		PrintToChatAll("\x01[\x05Confogl\x01] 启用 \"\x04%s\x01\" 配置", cfgfile);
+		
 		if(RM_DEBUG || IsDebugEnabled())
 		{
 			LogMessage("%s Starting match on config %s", RM_DEBUG_PREFIX, cfgfile);
 		}
 	}
+	else
+	{
+		PrintToChatAll("\x01[\x05Confogl\x01]  配置 \"\x04%s\x01\" 没有找到, 使用默认配置", cfgfile);
+	}
 }
 
 public Action:RM_Cmd_ForceMatch(client, args)
 {
-	if(RM_bIsMatchModeLoaded) { return Plugin_Handled; }
-
-	
 	if(RM_DEBUG || IsDebugEnabled())
 		LogMessage("%s Match mode forced to load!",RM_DEBUG_PREFIX);
 		
@@ -237,8 +213,15 @@ public Action:RM_Cmd_ForceMatch(client, args)
 	}
 	else
 	{
-		CPrintToChat(client, "{blue}[{default}Confogl{blue}] {default}Please specify a {olive}Config {default}to load.");
+		SetCustomCfg("");
 	}
+	
+	if(RM_bIsMatchModeLoaded)
+	{
+		RM_Match_Unload(true);
+	}
+	
+	RM_Match_Load();
 	
 	return Plugin_Handled;
 }
@@ -258,7 +241,7 @@ public Action:RM_Cmd_ResetMatch(client,args)
 
 public Action:RM_Cmd_Match(client, args)
 {
-	if(RM_bIsMatchModeLoaded || (!IsVersus() && !IsScavenge()) || !GetConVarBool(RM_hAllowVoting)){return Plugin_Handled;}
+	if((!IsVersus() && !IsScavenge()) || !GetConVarBool(RM_hAllowVoting)){return Plugin_Handled;}
 	
 	new iTeam = GetClientTeam(client);
 	if((iTeam == TEAM_SURVIVOR || iTeam == TEAM_INFECTED) && !RM_bMatchRequest[iTeam-2])
@@ -272,12 +255,16 @@ public Action:RM_Cmd_Match(client, args)
 	
 	if(RM_bMatchRequest[0] && RM_bMatchRequest[1])
 	{
-		PrintToChatAll("\x01[\x05Confogl\x01] Both teams have agreed to start a competitive match!");
+		PrintToChatAll("\x01[\x05Confogl\x01] 双方已同意启动一场正式比赛");
+		if(RM_bIsMatchModeLoaded && GetConVarBool(RM_hAllowCfgChange))
+		{
+			RM_Match_Unload(true);
+		}
 		RM_Match_Load();
 	}
 	else if(RM_bMatchRequest[0] || RM_bMatchRequest[1])
 	{
-		PrintToChatAll("\x01[\x05Confogl\x01] The \x04%s \x01have requested to start a competitive match. The \x04%s \x01must accept with \x04/match \x01command!",g_sTeamName[iTeam+4],g_sTeamName[iTeam+3]);
+		PrintToChatAll("\x01[\x05Confogl\x01] \x04%s \x01发起正式比赛模式. \x04%s \x01输入 \x04!match \x01接受", g_sTeamName[iTeam+4], g_sTeamName[iTeam+3]);
 		if(args > 0) // cfgfile specified
 		{
 			static String:sBuffer[128];
@@ -309,7 +296,6 @@ RM_OnClientDisconnect(client)
 
 RM_ResetMatchRequest()
 {
-	ResetConVar(RM_hConfigFile_On);
 	RM_bMatchRequest[0] = false;
 	RM_bMatchRequest[1] = false;
 }

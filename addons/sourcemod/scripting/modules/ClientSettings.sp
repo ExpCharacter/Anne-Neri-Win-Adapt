@@ -116,7 +116,7 @@ public _EnforceCliSettings_QueryReply(QueryCookie:cookie, client, ConVarQueryRes
 			{
 				LogMessage("[Confogl] ClientSettings: Kicking %L for bad %s value (%f). Min: %d %f Max: %d %f", \
 					client, cvarName, fCvarVal, clsetting[CLSE_hasMin], clsetting[CLSE_min], clsetting[CLSE_hasMax], clsetting[CLSE_max]);
-				CPrintToChatAll("{blue}[{default}Confogl{blue}] {olive}%L {default} was kicked for having an illegal value for {green}%s {blue}({default}%f{blue})", client, cvarName, fCvarVal);
+				PrintToChatAll("\x01[\x05Confogl\x01] Kicking \x04%L \x01for having an illegal value for \x04%s \x01(\x04%f\x01) !!!", client, cvarName, fCvarVal);
 				new String:kickMessage[256] = "Illegal Client Value for ";
 				Format(kickMessage, sizeof(kickMessage), "%s%s (%.2f)", kickMessage, cvarName, fCvarVal);
 				if (clsetting[CLSE_hasMin])
@@ -138,7 +138,6 @@ public _EnforceCliSettings_QueryReply(QueryCookie:cookie, client, ConVarQueryRes
 public Action:_ClientSettings_Cmd(client, args)
 {
 	new clscount = GetArraySize(ClientSettingsArray);
-	ReplyToCommand(client, "[Confogl] Tracked Client CVars (Total %d)", clscount);
 	for(new i = 0; i < clscount; i++)
 	{
 		static clsetting[CLSEntry];

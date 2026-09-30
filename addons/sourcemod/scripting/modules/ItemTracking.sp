@@ -105,8 +105,8 @@ public IT_OnModuleStart()
 	}
 	
 	
-	HookEvent("round_start", _IT_RoundStartEvent, EventHookMode_PostNoCopy);
-	HookEvent("round_end", _IT_RoundEndEvent, EventHookMode_PostNoCopy);
+	HookEvent("round_start", _IT_RoundStartEvent, EventHookMode_Post);
+	HookEvent("round_end", _IT_RoundEndEvent, EventHookMode_Post);
 	g_hSurvivorLimit = FindConVar("survivor_limit");
 	g_iSurvivorLimit = GetConVarInt(g_hSurvivorLimit);
 	HookConVarChange(g_hSurvivorLimit, _IT_SurvivorLimit_Change);
@@ -146,7 +146,7 @@ public _IT_RoundStartEvent(Handle:event, const String:name[], bool:dontBroadcast
 	g_iSaferoomCount[END_SAFEROOM - 1] = 0;
 	// Mapstart happens after round_start most of the time, so we need to wait for g_bIsRound1Over.
 	// Plus, we don't want to have conflicts with EntityRemover.
-	CreateTimer(1.0, IT_RoundStartTimer);
+	CreateTimer(0.1, IT_RoundStartTimer);
 }
 
 public Action:IT_RoundStartTimer(Handle:timer)
@@ -154,25 +154,12 @@ public Action:IT_RoundStartTimer(Handle:timer)
 	if(!g_bIsRound1Over)
 	{
 		// Round1
-		if(IsModuleEnabled())
-		{
-			EnumAndElimSpawns();
-		}
+		EnumAndElimSpawns();
 	}
 	else
 	{
 		// Round2
-		if(IsModuleEnabled())
-		{
-			if(UseConsistentSpawns())
-			{
-				GenerateStoredSpawns();
-			}
-			else
-			{
-				EnumAndElimSpawns(); 
-			}
-		}
+		GenerateStoredSpawns();
 	}
 	return Plugin_Handled;
 }

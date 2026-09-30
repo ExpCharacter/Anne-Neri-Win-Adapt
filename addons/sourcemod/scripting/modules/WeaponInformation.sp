@@ -577,8 +577,8 @@ WI_Convar_Setup()
 	Weapon_hReplaceTier2_All	 	= CreateConVarEx("replace_tier2_all","1","Replace ALL tier 2 weapons with their tier 1 equivalent EVERYWHERE");
 	HookConVarChange(Weapon_hReplaceTier2_All,WI_ConvarChange);
 	
-	Weapon_hLimitTier2				= CreateConVarEx("limit_tier2","1","Limit tier 2 weapons outside safe rooms. Replaces a tier 2 stack with tier 1 upon first weapon pickup");
-	Weapon_hLimitTier2_Safehouse 	= CreateConVarEx("limit_tier2_saferoom","1","Limit tier 2 weapons inside safe rooms. Replaces a tier 2 stack with tier 1 upon first weapon pickup");
+	Weapon_hLimitTier2				= CreateConVarEx("limit_tier2","0","Limit tier 2 weapons outside safe rooms. Replaces a tier 2 stack with tier 1 upon first weapon pickup");
+	Weapon_hLimitTier2_Safehouse 	= CreateConVarEx("limit_tier2_saferoom","0","Limit tier 2 weapons inside safe rooms. Replaces a tier 2 stack with tier 1 upon first weapon pickup");
 	HookConVarChange(Weapon_hLimitTier2,WI_ConvarChange);
 	HookConVarChange(Weapon_hLimitTier2_Safehouse,WI_ConvarChange);
 	
@@ -1092,20 +1092,11 @@ WI_ReplaceExtra(iEntity,iWeaponIndex)
 	
 	if(bIsInStartSaferoom && Weapon_bReplaceStartKits)
 	{
-		decl Float:fRotation[3], String:sSpawnBuffer[128];
-		GetEntPropVector(iEntity, Prop_Send, "m_angRotation", fRotation);
 		AcceptEntityInput(iEntity, "Kill");
-		Format(sSpawnBuffer,sizeof(sSpawnBuffer),"%s%s%s",SPAWN_PREFIX,Weapon_Spawns[WEAPON_PAIN_PILLS_INDEX],SPAWN_SURFIX);
-		iEntity = CreateEntityByName(sSpawnBuffer);
-		TeleportEntity(iEntity, fOrigin, fRotation, NULL_VECTOR);
-		DispatchSpawn(iEntity);
-		SetEntityMoveType(iEntity,MOVETYPE_NONE);
-		
-		#if(DEBUG_WI)
-			LogMessage("%s         Replacing start medkit with pills",DEBUG_WI_PREFIX);
-		#endif
+		return;
 	}
-	else if(bIsInFinaleArea && Weapon_bReplaceFinaleKits)
+	
+	if(bIsInFinaleArea && Weapon_bReplaceFinaleKits)
 	{
 		decl Float:fRotation[3], String:sSpawnBuffer[128];
 		GetEntPropVector(iEntity, Prop_Send, "m_angRotation", fRotation);

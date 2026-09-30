@@ -104,7 +104,6 @@ public Action:ER_KV_CmdReload(client, args)
 {
 	if (!IsPluginEnabled()) return Plugin_Continue;
 	
-	ReplyToCommand(client, "[ER] Reloading EntityRemoveData");
 	ER_KV_Reload();
 	return Plugin_Handled;
 }
