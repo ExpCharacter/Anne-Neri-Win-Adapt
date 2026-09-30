@@ -269,7 +269,6 @@ public Action:GT_FireImmunityTimer(Handle:timer)
 
 GT_PauseTank()
 {
-    SetConVarFloat(FindConVar("tank_throw_allow_range"),THROWRANGE);
     if(!IsValidEntity(g_iGT_TankClient)) return;
     SetEntityMoveType(g_iGT_TankClient,MOVETYPE_NONE);
     SetEntProp(g_iGT_TankClient,Prop_Send,"m_isGhost",1,1);

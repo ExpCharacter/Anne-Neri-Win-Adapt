@@ -165,7 +165,6 @@ public Action:_ClientSettings_Cmd(client, args)
 				StrCat(message, sizeof(message), "Action: Log");
 			}
 		}
-		ReplyToCommand(client, message);
 	}
 	return Plugin_Handled;
 }

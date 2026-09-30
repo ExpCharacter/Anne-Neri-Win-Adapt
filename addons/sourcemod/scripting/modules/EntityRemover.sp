@@ -336,7 +336,8 @@ public Action:ER_RoundStart_Timer(Handle:timer)
 	if(kERData != INVALID_HANDLE) KvRewind(kERData);
 	
 	new iEntCount = GetEntityCount();
-	for (new ent = MaxClients+1; ent <= iEntCount; ent++)
+	new ent = 66;
+	while (ent < iEntCount)
 	{
 		if (IsValidEntity(ent))
 		{
@@ -362,5 +363,6 @@ public Action:ER_RoundStart_Timer(Handle:timer)
 				KvRewind(kERData);
 			}
 		}
+		ent++;
 	}
 }
