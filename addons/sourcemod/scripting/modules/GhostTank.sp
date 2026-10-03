@@ -33,7 +33,7 @@ static 	bool:	g_bGT_HordesDisabled;
 
 GT_OnModuleStart()
 {
-    g_hGT_Enabled = CreateConVarEx("boss_tank", "1", "");
+    g_hGT_Enabled	= CreateConVarEx("boss_tank", "1", "Tank can't be prelight, frozen and ghost until player takes over, punch fix, and no rock throw for AI tank while waiting for player",CVAR_FLAGS);
     g_hGT_RemoveEscapeTank = CreateConVarEx("remove_escape_tank", "1", "Remove tanks that spawn as the rescue vehicle is incoming on finales.");
     g_hGT_DisableTankHordes = CreateConVarEx("disable_tank_hordes", "0", "Disable natural hordes while tanks are in play");
     g_hGT_BlockPunchRock = CreateConVarEx("block_punch_rock", "0", "Block tanks from punching and throwing a rock at the same time");
@@ -269,6 +269,7 @@ public Action:GT_FireImmunityTimer(Handle:timer)
 
 GT_PauseTank()
 {
+    SetConVarFloat(FindConVar("tank_throw_allow_range"),THROWRANGE);
     if(!IsValidEntity(g_iGT_TankClient)) return;
     SetEntityMoveType(g_iGT_TankClient,MOVETYPE_NONE);
     SetEntProp(g_iGT_TankClient,Prop_Send,"m_isGhost",1,1);

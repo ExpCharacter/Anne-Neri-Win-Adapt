@@ -104,6 +104,7 @@ public Action:ER_KV_CmdReload(client, args)
 {
 	if (!IsPluginEnabled()) return Plugin_Continue;
 	
+	ReplyToCommand(client, "[ER] Reloading EntityRemoveData");
 	ER_KV_Reload();
 	return Plugin_Handled;
 }
@@ -336,8 +337,7 @@ public Action:ER_RoundStart_Timer(Handle:timer)
 	if(kERData != INVALID_HANDLE) KvRewind(kERData);
 	
 	new iEntCount = GetEntityCount();
-	new ent = 66;
-	while (ent < iEntCount)
+	for (new ent = MaxClients+1; ent <= iEntCount; ent++)
 	{
 		if (IsValidEntity(ent))
 		{
@@ -363,6 +363,5 @@ public Action:ER_RoundStart_Timer(Handle:timer)
 				KvRewind(kERData);
 			}
 		}
-		ent++;
 	}
 }
