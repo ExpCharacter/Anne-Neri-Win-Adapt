@@ -303,7 +303,7 @@
 		}
 		"exec vote/weapon/zonemod.cfg"
 		{
-			"message" "zonemod2.9枪械"
+			"message" "zonemod2.9.2枪械"
 		}
 		"exec vote/returnblood/returnblood_Anne.cfg"
 		{

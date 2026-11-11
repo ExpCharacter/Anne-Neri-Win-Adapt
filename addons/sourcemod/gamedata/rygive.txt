@@ -9,7 +9,7 @@
 				"windows"
 				{
 					"signature"	"CTerrorPlayer::ReplaceWithBot.jumptable"
-					"offset"	"7"
+					"offset"	"39"
 				}
 			}
 		}
